@@ -1,11 +1,9 @@
 import { motion } from "framer-motion";
 
 const spring = { type: "spring" as const, duration: 0.4, bounce: 0 };
-const stagger = { staggerChildren: 0.08 };
 const fadeUp = {
-  initial: { opacity: 0, y: 10 },
-  animate: { opacity: 1, y: 0 },
-  transition: spring,
+  hidden: { opacity: 0, y: 10 },
+  show: { opacity: 1, y: 0, transition: spring },
 };
 
 const Hero = () => {
