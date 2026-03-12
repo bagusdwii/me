@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { Moon, Sun } from "lucide-react";
+import { useTheme } from "@/hooks/use-theme";
 
 const links = [
   { label: "Work", href: "#work" },
@@ -11,6 +13,7 @@ const spring = { type: "spring" as const, duration: 0.4, bounce: 0 };
 
 const Navbar = () => {
   const [hovered, setHovered] = useState<string | null>(null);
+  const { theme, toggle } = useTheme();
 
   return (
     <motion.nav
@@ -50,6 +53,13 @@ const Navbar = () => {
         >
           GitHub ↗
         </a>
+        <button
+          onClick={toggle}
+          aria-label="Toggle theme"
+          className="ml-2 p-2 rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
+        >
+          {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+        </button>
       </div>
     </motion.nav>
   );
