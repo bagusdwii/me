@@ -10,9 +10,9 @@ const Hero = () => {
   return (
     <section className="min-h-svh flex flex-col justify-center px-6 md:px-12 lg:px-24 pt-20">
       <motion.div
-        initial="initial"
-        animate="animate"
-        variants={stagger}
+        initial="hidden"
+        animate="show"
+        transition={{ staggerChildren: 0.08 }}
         className="max-w-4xl"
       >
         <motion.div variants={fadeUp} className="mb-6">
