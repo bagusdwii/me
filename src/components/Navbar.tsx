@@ -92,7 +92,7 @@ const Navbar = () => {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={spring}
-            className="md:hidden overflow-hidden border-t border-border"
+            className="md:hidden overflow-hidden border-t border-border bg-background"
           >
             <div className="flex flex-col gap-1 px-6 py-4">
               {links.map((link) => (
