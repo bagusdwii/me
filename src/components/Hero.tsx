@@ -90,8 +90,8 @@ const Hero = () => {
           <img
             src={profilePhoto}
             alt="Bagus Dwi"
-            width={1024}
-            height={1024}
+            width={636}
+            height={636}
             className="w-48 h-48 md:w-72 md:h-72 lg:w-80 lg:h-80 object-cover rounded-full shadow-border-accent"
           />
         </motion.div>
